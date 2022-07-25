@@ -21,11 +21,26 @@ public class GameManager : Singleton<GameManager>
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (SceneManager.GetActiveScene().name == "SampleScene")
+                SceneManager.LoadScene("MainMenu");
+            else
+                SceneManager.LoadScene("SampleScene");
+        }
     }
 
     public void EndGame()
     {
+        SceneManager.LoadScene("Victory");
+    }
 
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }
