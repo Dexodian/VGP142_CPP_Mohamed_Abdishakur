@@ -37,7 +37,7 @@ public class CheckForPlayer : MonoBehaviour
 
         if (playerTransform)
         {
-            playerPosition = new Vector3(playerTransform.position.x, 30f, playerTransform.position.z);
+            playerPosition = new Vector3(playerTransform.position.x, 7.77f, playerTransform.position.z);
             
             transform.position = Vector3.MoveTowards(transform.position, playerPosition, speed);
         }

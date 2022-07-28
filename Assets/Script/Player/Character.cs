@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class Character : MonoBehaviour
@@ -99,6 +100,11 @@ public class Character : MonoBehaviour
         if (hit.gameObject.tag == "Coin")
         {
             Destroy(hit.gameObject);
+        }
+
+        if (hit.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
