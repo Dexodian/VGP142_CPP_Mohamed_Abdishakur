@@ -8,13 +8,13 @@ using UnityEngine.SceneManagement;
 public class Character : MonoBehaviour
 {
     CharacterController controller;
-
+    Animator anim;
     [Header("Player Settings")]
     [Space(10)]
     [Tooltip("Speed value between 1 and 20")]
     [Range(1.0f, 20.0f)]
     public float speed = 20;
-    public float gravity = 9.8f;
+    public float gravity = 9.81f;
     public float jumpSpeed = 10.0f;
 
     Vector3 moveDir;
@@ -24,20 +24,19 @@ public class Character : MonoBehaviour
     public float projectileForce = 10.0f;
     public Rigidbody projectilePrefab;
     public Transform projectileSpawnPoint;
-    public Transform projectileSpawnPointLeft;
-    public Transform projectileSpawnPointRight;
 
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
 
         controller.minMoveDistance = 0.0f;
 
         if (speed <= 0.0f)
         {
-            speed = 6.0f;
+            speed = 20.0f;
 
         }
 
@@ -72,6 +71,9 @@ public class Character : MonoBehaviour
 
             moveDir.y -= gravity * Time.deltaTime;
             controller.Move(moveDir * Time.deltaTime);
+
+            anim.SetFloat("horizontal", horizontal);
+            anim.SetFloat("", vertical);
 
             if (Input.GetButtonDown("Fire1"))
                 Fire();
