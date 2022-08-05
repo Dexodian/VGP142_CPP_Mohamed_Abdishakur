@@ -4,11 +4,12 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(CharacterController), typeof(Animator))]
 public class Character : MonoBehaviour
 {
     CharacterController controller;
     Animator anim;
+
     [Header("Player Settings")]
     [Space(10)]
     [Tooltip("Speed value between 1 and 20")]
@@ -73,7 +74,7 @@ public class Character : MonoBehaviour
             controller.Move(moveDir * Time.deltaTime);
 
             anim.SetFloat("horizontal", horizontal);
-            anim.SetFloat("", vertical);
+            anim.SetFloat("vertical", vertical);
 
             if (Input.GetButtonDown("Fire1"))
                 Fire();

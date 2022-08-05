@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d22f32b5f2e85f47903ec64ff8e0131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 16
+  speed: 6
   gravity: 9.8
   jumpSpeed: 10
   projectileForce: 50
@@ -2808,7 +2808,7 @@ MonoBehaviour:
   sightDistance: 80
   originPoint: {fileID: 412861893}
   speed: 0.1
-  rotationSpeed: 10
+  rotationSpeed: 0
 --- !u!143 &1594915721
 CharacterController:
   m_ObjectHideFlags: 0
