@@ -55,6 +55,7 @@ public class Character : MonoBehaviour
 
         try
         {
+            
             if (controller.isGrounded)
 
             {
@@ -66,6 +67,7 @@ public class Character : MonoBehaviour
                 if (Input.GetButtonDown("Jump"))
                 {
                     moveDir.y = jumpSpeed;
+                    anim.SetTrigger("Jump");
                 }
 
             }
@@ -88,6 +90,7 @@ public class Character : MonoBehaviour
 
     void Fire()
     {
+        anim.SetTrigger("Fire");
         if (projectilePrefab && projectileSpawnPoint)
         {
             Rigidbody temp = Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.rotation);

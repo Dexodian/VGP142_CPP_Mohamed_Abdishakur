@@ -8,6 +8,8 @@ TagManager:
   - PlayerEyes
   - Enemy
   - other
+  - Punch
+  - Kick
   layers:
   - Default
   - TransparentFX
