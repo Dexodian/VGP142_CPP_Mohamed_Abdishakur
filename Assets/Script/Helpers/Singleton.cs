@@ -6,12 +6,15 @@ public abstract class Singleton<T> : MonoBehaviour where T : Component
 {
     static T _instance;
 
+
     public static T instance
     {
         get
         {
             if (!_instance)
+            {
                 _instance = GameObject.FindObjectOfType<T>();
+            }
 
             if (!_instance)
             {

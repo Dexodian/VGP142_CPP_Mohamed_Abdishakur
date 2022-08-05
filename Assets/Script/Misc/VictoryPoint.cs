@@ -10,4 +10,5 @@ public class VictoryPoint : MonoBehaviour
         if (other.gameObject.tag == "Player")
             GameManager.instance.EndGame();
     }
+
 }
