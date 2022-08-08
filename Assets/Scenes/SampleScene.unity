@@ -2575,21 +2575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6bc63e24c4f794d99eae6350a7a829, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SingletonInstanceSet:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1853311154}
-        m_TargetAssemblyTypeName: VictoryPoint, Assembly-CSharp
-        m_MethodName: Finish
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &1490213856
 Transform:
   m_ObjectHideFlags: 0
