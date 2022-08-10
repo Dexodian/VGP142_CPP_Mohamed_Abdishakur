@@ -78,6 +78,10 @@ public class Character : MonoBehaviour
                 {
                     anim.SetTrigger("Kick");
                 }
+                if (Input.GetKeyDown(KeyCode.LeftControl))
+                {
+                    anim.SetTrigger("Fire");
+                }
             }
 
             moveDir.y -= gravity * Time.deltaTime;
@@ -106,8 +110,7 @@ public class Character : MonoBehaviour
             temp.AddForce(projectileSpawnPoint.forward * projectileForce, ForceMode.Impulse);
 
             Destroy(temp.gameObject, 2.0f);
-        }
-    }
+        }    }
 
 
 

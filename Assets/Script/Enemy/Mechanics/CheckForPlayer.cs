@@ -10,10 +10,14 @@ public class CheckForPlayer : MonoBehaviour
     public float speed;
     public float rotationSpeed;
     private Vector3 playerPosition;
+    public Animator anim;
 
     // Update is called once per frame
     void Update()
     {
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
         if (!playerTransform)
             transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
         else if (speed < 0)
@@ -21,9 +25,12 @@ public class CheckForPlayer : MonoBehaviour
         else
             transform.LookAt(playerPosition);
 
+
         RaycastHit hit;
         if (Physics.Raycast(originPoint.position, transform.forward, out hit, sightDistance))
         {
+            
+
             if (hit.transform.gameObject.tag == "Player")
             {
                 playerTransform = hit.transform;

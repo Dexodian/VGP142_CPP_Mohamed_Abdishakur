@@ -22,11 +22,11 @@ public class Kick : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Punch") || anim.GetCurrentAnimatorStateInfo(0).IsName("Kick"))
-                eAnim.SetTrigger("Death");
+            eAnim.SetTrigger("Death");
             Destroy(other.gameObject, 5f);
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Punch") || anim.GetCurrentAnimatorStateInfo(0).IsName("Kick"));
 
         }
     }
