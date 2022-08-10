@@ -70,6 +70,14 @@ public class Character : MonoBehaviour
                     anim.SetTrigger("Jump");
                 }
 
+                if (Input.GetKeyDown(KeyCode.Q))
+                {
+                    anim.SetTrigger("Punch");
+                }
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    anim.SetTrigger("Kick");
+                }
             }
 
             moveDir.y -= gravity * Time.deltaTime;
@@ -79,7 +87,7 @@ public class Character : MonoBehaviour
             anim.SetFloat("vertical", vertical);
 
             if (Input.GetButtonDown("Fire1"))
-                Fire();
+                Fire1();
             throw new UnassignedReferenceException("Shooting Disabled " + name + " Shooting Enabled " + Input.GetButtonDown("Fire1"));
         }
         finally
@@ -88,7 +96,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    void Fire()
+    void Fire1()
     {
         anim.SetTrigger("Fire");
         if (projectilePrefab && projectileSpawnPoint)
@@ -100,6 +108,8 @@ public class Character : MonoBehaviour
             Destroy(temp.gameObject, 2.0f);
         }
     }
+
+
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {

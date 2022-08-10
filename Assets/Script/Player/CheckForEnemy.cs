@@ -9,6 +9,8 @@ public class CheckForEnemy : MonoBehaviour
     public Transform originPoint;
     private float enemySpeed;
 
+    public Animator anim;
+
     // Update is called once per frame
     void Update()
     {

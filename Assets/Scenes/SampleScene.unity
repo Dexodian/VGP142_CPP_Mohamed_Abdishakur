@@ -139,8 +139,22 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 0.35, z: 0.3}
-  m_Center: {x: 0.12, y: 0, z: 0}
+  m_Size: {x: 2.4199522, y: 0.81774694, z: 0.9152519}
+  m_Center: {x: 0.5799882, y: 0.050250266, z: 0.02347545}
+--- !u!114 &69899562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69899558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283a697007eccc642bb2ae48eb0dc5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 333482506}
+  eAnim: {fileID: 0}
 --- !u!1001 &111162522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -506,6 +520,7 @@ MonoBehaviour:
   enemyTransform: {fileID: 0}
   sightDistance: 50
   originPoint: {fileID: 1744742043}
+  anim: {fileID: 0}
 --- !u!114 &333482500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,6 +588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f587c14c5a593ec41b1a6861f4fc61cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 333482506}
 --- !u!54 &333482504
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -603,6 +619,11 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &333482506 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: faccb8eee34f00541a3fe1dc458a1fb2, type: 3}
+  m_PrefabInstance: {fileID: 535960865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &341006729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2408,6 +2429,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1941610574059634636, guid: 6629e1533c031eb4f951241959947e17, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 333482506}
+    - target: {fileID: -1941610574059634636, guid: 6629e1533c031eb4f951241959947e17, type: 3}
+      propertyPath: eAnim
+      value: 
+      objectReference: {fileID: 1594915723}
     - target: {fileID: 963505324341271108, guid: 6629e1533c031eb4f951241959947e17, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -2810,7 +2839,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   sightDistance: 80
   originPoint: {fileID: 412861893}
-  speed: 0.1
+  speed: 0.02
   rotationSpeed: 0
 --- !u!143 &1594915721
 CharacterController:
@@ -2844,6 +2873,11 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &1594915723 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7bad0570513911749b5650e70104f3bc, type: 3}
+  m_PrefabInstance: {fileID: 1536395651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1706111022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3143,8 +3177,22 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 1, z: 0.3}
-  m_Center: {x: 0, y: -0.06, z: 0}
+  m_Size: {x: 0.469276, y: 1.2730585, z: 0.9517509}
+  m_Center: {x: 0.017912867, y: -0.1965293, z: -0.013136617}
+--- !u!114 &1808715672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808715668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283a697007eccc642bb2ae48eb0dc5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 333482506}
+  eAnim: {fileID: 0}
 --- !u!1 &1853311149
 GameObject:
   m_ObjectHideFlags: 0
