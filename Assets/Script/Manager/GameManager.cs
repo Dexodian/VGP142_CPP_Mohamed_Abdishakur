@@ -11,23 +11,24 @@ public class GameManager : Singleton<GameManager>
         base.Awake();
 
     }
+    [HideInInspector] public Character playerInstance;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        /*if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (SceneManager.GetActiveScene().name == "SampleScene")
                 SceneManager.LoadScene("MainMenu");
             else
                 SceneManager.LoadScene("SampleScene");
-        }
+        }*/
     }
 
     public void EndGame()
