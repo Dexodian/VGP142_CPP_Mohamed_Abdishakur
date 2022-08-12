@@ -24,10 +24,10 @@ public class GameManager : Singleton<GameManager>
     {
         /*if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SceneManager.GetActiveScene().name == "SampleScene")
+            if (SceneManager.GetActiveScene().name == "Level")
                 SceneManager.LoadScene("MainMenu");
             else
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("Level");
         }*/
     }
 
