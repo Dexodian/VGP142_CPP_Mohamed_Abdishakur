@@ -96,6 +96,7 @@ public class CanvasManager : MonoBehaviour
                     Time.timeScale = 1;
                     GameManager.instance.playerInstance.GetComponent<Character>().enabled = true;
                     GameManager.instance.playerInstance.GetComponent<Projectile>().enabled = true;
+                    
                 }
             }
         }

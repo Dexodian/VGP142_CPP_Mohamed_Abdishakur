@@ -13,7 +13,8 @@ public class GameManager : Singleton<GameManager>
     }
     [HideInInspector] public Character playerInstance;
 
-   
+
+
     void Start()
     {
         
@@ -22,13 +23,15 @@ public class GameManager : Singleton<GameManager>
 
     void Update()
     {
-        /*if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (SceneManager.GetActiveScene().name == "Level")
-                SceneManager.LoadScene("MainMenu");
-            else
-                SceneManager.LoadScene("Level");
-        }*/
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (SceneManager.GetActiveScene().name == "Start")
+                    SceneManager.LoadScene("Level");
+                else if (SceneManager.GetActiveScene().name == "GameOver")
+                    SceneManager.LoadScene("Start");
+            }
+        }
     }
 
     public void EndGame()
