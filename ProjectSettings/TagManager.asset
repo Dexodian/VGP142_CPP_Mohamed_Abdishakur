@@ -11,6 +11,7 @@ TagManager:
   - Punch
   - Kick
   - Water
+  - Enemy_2
   layers:
   - Default
   - TransparentFX

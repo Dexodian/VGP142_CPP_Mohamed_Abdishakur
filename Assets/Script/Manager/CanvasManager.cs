@@ -112,7 +112,7 @@ public class CanvasManager : MonoBehaviour
 
     public void ReturnToMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Start");
         Time.timeScale = 1;
     }
 
