@@ -10,6 +10,7 @@ TagManager:
   - other
   - Punch
   - Kick
+  - Water
   layers:
   - Default
   - TransparentFX

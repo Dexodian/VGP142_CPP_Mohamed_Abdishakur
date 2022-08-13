@@ -123,7 +123,12 @@ public class Character : MonoBehaviour
 
         if (hit.gameObject.tag == "Enemy")
         {
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("GameOver");
+        }
+
+        if (hit.gameObject.tag == "Water")
+        {
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
