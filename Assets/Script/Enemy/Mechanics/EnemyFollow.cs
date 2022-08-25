@@ -8,7 +8,7 @@ public class EnemyFollow : MonoBehaviour
     private Vector3 playerPosition;
     public float speed;
     public float rotationSpeed;
-    public Animator eAnim;
+    
 
     void Update()
     {
