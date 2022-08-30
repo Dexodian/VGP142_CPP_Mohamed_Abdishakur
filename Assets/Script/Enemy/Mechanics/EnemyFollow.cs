@@ -20,7 +20,7 @@ public class EnemyFollow : MonoBehaviour
             transform.LookAt(playerPosition);
         if (playerTransform)
         {
-            playerPosition = new Vector3(playerTransform.position.x, 7.77f, playerTransform.position.z);
+            playerPosition = new Vector3(playerTransform.position.x, playerTransform.position.y, playerTransform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, playerPosition, speed);
         }
     }
