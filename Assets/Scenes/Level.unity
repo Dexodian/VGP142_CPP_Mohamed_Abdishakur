@@ -4121,7 +4121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bad0570513911749b5650e70104f3bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 310.1
+      value: 323.53
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bad0570513911749b5650e70104f3bc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4129,7 +4129,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bad0570513911749b5650e70104f3bc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 197.73
+      value: 186.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bad0570513911749b5650e70104f3bc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4413,22 +4413,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dca0a52b7bc41c4bbb05832eb5d9c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 5
   onStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  target: {fileID: 0}
-  playerTransform: {fileID: 0}
-  distance: 20
-  collectiblePrefabArray: []
+  target: {fileID: 333482496}
+  playerTransform: {fileID: 333482497}
+  distance: 10
+  collectiblePrefabArray:
+  - {fileID: 2275045185390663155, guid: 738f5b1f4f072fa428aba0359b3fe406, type: 3}
+  - {fileID: 2275045185390663155, guid: 1fc7c22807671a5469e1a9a0b78c9c0f, type: 3}
+  - {fileID: 2275045185390663155, guid: 5d33dfadc9cb1014a85f078da6f75f63, type: 3}
   _currentState: 1
   path:
   - {fileID: 1806943398}
   - {fileID: 1642932089}
   - {fileID: 73360863}
   - {fileID: 304637681}
-  pathIndex: 0
-  distToNextNode: 0
+  pathIndex: 2
+  distToNextNode: 0.5
 --- !u!195 &1594915726
 NavMeshAgent:
   m_ObjectHideFlags: 0
