@@ -12,6 +12,7 @@ TagManager:
   - Kick
   - Water
   - Enemy_2
+  - PatrolNode
   layers:
   - Default
   - TransparentFX
