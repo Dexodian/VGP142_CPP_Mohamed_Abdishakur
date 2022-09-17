@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(CharacterController), typeof(Animator))]
 public class Character : MonoBehaviour
@@ -17,6 +18,14 @@ public class Character : MonoBehaviour
     public float speed = 20;
     public float gravity = 9.81f;
     public float jumpSpeed = 10.0f;
+
+    [HideInInspector] public ObjectSounds sfxManager;
+    public AudioClip shootSound;
+    public AudioClip punchSound;
+    public AudioClip kickSound;
+    public AudioMixerGroup soundFXGroup;
+
+
 
     Vector3 moveDir;
 
@@ -73,14 +82,17 @@ public class Character : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Q))
                 {
                     anim.SetTrigger("Punch");
+                    sfxManager.Play(punchSound, soundFXGroup);
                 }
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     anim.SetTrigger("Kick");
+                    sfxManager.Play(kickSound, soundFXGroup);
                 }
                 if (Input.GetKeyDown(KeyCode.LeftControl))
                 {
                     anim.SetTrigger("Fire");
+                    sfxManager.Play(shootSound, soundFXGroup);
                 }
             }
 
@@ -129,6 +141,14 @@ public class Character : MonoBehaviour
         if (hit.gameObject.tag == "Water")
         {
             SceneManager.LoadScene("GameOver");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "J_Powerup")
+        {
+
         }
     }
 }

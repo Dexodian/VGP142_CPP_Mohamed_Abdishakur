@@ -15,6 +15,7 @@ TagManager:
   - PatrolNode
   - Attach
   - Weapon
+  - J_Powerup
   layers:
   - Default
   - TransparentFX
