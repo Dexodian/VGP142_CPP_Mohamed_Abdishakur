@@ -92,7 +92,7 @@ public class Character : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.LeftControl))
                 {
                     anim.SetTrigger("Fire");
-                    sfxManager.Play(shootSound, soundFXGroup);
+                    
                 }
             }
 
